@@ -1,0 +1,5 @@
+INDEX VERSION 1.131
+C:\cbj\_spring_workspace3\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\1976119699.index
+\spring_alone_project\src\main\java
+C:\cbj_coding\_spring_workspace3\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\1976119699.index
+\spring_alone_project\src\main\java
