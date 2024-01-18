@@ -1,0 +1,39 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+    <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+    
+<jsp:include page="../layout/header.jsp" />
+
+<div class="mb-3">
+	<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Title</th>
+      <th scope="col">Writer</th>
+      <th scope="col">Content</th>
+      <th scope="col">regAt</th>
+      <th scope="col">modAt</th>
+      <th scope="col">readCount</th>
+      <th scope="col">cmtQty</th>
+      <th scope="col">hasFile</th>
+    </tr>
+  </thead>
+  <tbody>
+	  <c:forEach items="${list }" var="bvo">
+	  	<tr>
+	      <th scope="row">1</th>
+	      <td>Mark</td>
+	      <td>Otto</td>
+	      <td>@mdo</td>
+	      <td>@mdo</td>
+	      <td>@mdo</td>
+	      <td>@mdo</td>
+	      <td>@mdo</td>
+	    </tr>
+	  </c:forEach>
+  </tbody>
+</table>
+</div>
+
+<jsp:include page="../layout/footer.jsp" />

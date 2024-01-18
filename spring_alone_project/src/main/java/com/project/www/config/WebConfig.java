@@ -36,8 +36,8 @@ public class WebConfig extends AbstractAnnotationConfigDispatcherServletInitiali
 	
 	protected void customizeRegistration(Dynamic registration){
 		//그 외 기타 사용자 설정
-		//사용자 지정 익셉션 설정을 할 것인지 처리 throwExceptionIfNotHandlerFound
-		registration.setInitParameter("throwExceptionIfNotHandlerFound", "true");
+		//사용자 지정 익셉션 설정을 할 것인지 처리 throwExceptionIfNoHandlerFound
+		registration.setInitParameter("throwExceptionIfNoHandlerFound", "true");
 	}
 	
 }

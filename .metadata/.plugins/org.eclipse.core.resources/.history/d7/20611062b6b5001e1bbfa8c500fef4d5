@@ -1,0 +1,23 @@
+package com.project.www.service;
+
+import org.springframework.stereotype.Controller;
+
+import com.project.www.domain.BoardVO;
+import com.project.www.repository.BoardDAO;
+
+import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
+
+@Slf4j
+@RequiredArgsConstructor
+@Controller
+public class BoardServiceImpl implements BoardService {
+	
+	private final BoardDAO bdao;
+
+	@Override
+	public int insert(BoardVO bvo) {
+		// TODO Auto-generated method stub
+		return bdao.insert(bvo);
+	}
+}

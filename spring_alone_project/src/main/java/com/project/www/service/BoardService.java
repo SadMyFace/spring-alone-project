@@ -1,0 +1,17 @@
+package com.project.www.service;
+
+import java.util.List;
+
+import com.project.www.domain.BoardVO;
+
+public interface BoardService {
+
+	int insertBoard(BoardVO bvo);
+
+	List<BoardVO> getList();
+
+	int updateReadCount(long bno);
+
+	Object getDetail(long bno);
+
+}

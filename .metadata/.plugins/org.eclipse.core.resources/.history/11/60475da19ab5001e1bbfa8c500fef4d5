@@ -1,0 +1,15 @@
+package com.project.www.config;
+
+import org.springframework.context.annotation.ComponentScan;
+import org.springframework.scheduling.annotation.EnableScheduling;
+import org.springframework.transaction.annotation.EnableTransactionManagement;
+import org.springframework.web.servlet.config.annotation.EnableWebMvc;
+
+@MapperScan(basePackages = {"com.project.www.repository"})
+@ComponentScan(basePackages = {"com.project.www.service"})
+@EnableTransactionManagement
+@EnableScheduling
+@Configuration
+public class RootConfig {
+	
+}
