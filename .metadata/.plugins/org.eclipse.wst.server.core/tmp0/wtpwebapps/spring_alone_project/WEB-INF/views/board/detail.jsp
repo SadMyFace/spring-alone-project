@@ -44,6 +44,6 @@
 	
 	<a href="/board/list"><button type="button" class="btn btn-outline-primary">리스트로 이동</button></a>
 	<a href="/board/modify?bno=${bvo.bno }"><button type="button" class="btn btn-outline-success">수정</button></a>
-	<a href="/board/remove?bno=${bvo.bno }"><button type="button" class="btn btn-outline-danger">삭제</button></a>
+	<a href="/board/delete?bno=${bvo.bno }"><button type="button" class="btn btn-outline-danger">삭제</button></a>
 	
 <jsp:include page="../layout/footer.jsp" />

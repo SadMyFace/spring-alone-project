@@ -8,8 +8,7 @@
 <br>
 <h2>Modify Page</h2>
 <br>
-<c:set value="${bdto.bvo }" var="bvo" />
-<form action="/board/modify" method="post" enctype="multipart/form-data">
+<form action="/board/modify" method="post">
 
 	<table class="table">
 		<tr>
@@ -29,12 +28,12 @@
 			<td><textarea name="content" class="form-control" id="content" rows="3">${bvo.content }</textarea></td>
 		</tr>
 		<tr>
-			<th>Reg_date</th>
-			<td><input type="text" name="reg_date" class="form-control" id="regAt" value="${bvo.regAt }" readonly="readonly"></td>
+			<th>reg_at</th>
+			<td><input type="text" name="regAt" class="form-control" id="regAt" value="${bvo.regAt }" readonly="readonly"></td>
 		</tr>
 		<tr>
 			<th>mod_at</th>
-			<td><input type="text" name="read_count" class="form-control" id="modAt" value="${bvo.modAt }" readonly="readonly"></td>
+			<td><input type="text" name="modAt" class="form-control" id="modAt" value="${bvo.modAt }" readonly="readonly"></td>
 		</tr>
 		<tr>
 			<th>Read_count</th>
@@ -42,11 +41,11 @@
 		</tr>
 		<tr>
 			<th>cmt_qty</th>
-			<td><input type="text" name="read_count" class="form-control" id="cmtQty" value="${bvo.cmtQty }" readonly="readonly"></td>
+			<td><input type="text" name="cmtQty" class="form-control" id="cmtQty" value="${bvo.cmtQty }" readonly="readonly"></td>
 		</tr>
 		<tr>
 			<th>has_file</th>
-			<td><input type="text" name="read_count" class="form-control" id=hasFile" value="${bvo.hasFile }" readonly="readonly"></td>
+			<td><input type="text" name="hasFile" class="form-control" id=hasFile" value="${bvo.hasFile }" readonly="readonly"></td>
 		</tr>
 	</table>
 	
