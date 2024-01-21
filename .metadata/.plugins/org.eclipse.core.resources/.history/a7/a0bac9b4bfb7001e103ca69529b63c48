@@ -1,0 +1,20 @@
+package com.project.www.repository;
+
+import java.util.List;
+
+import com.project.www.domain.CommentVO;
+import com.project.www.domain.PagingVO;
+
+public interface CommentDAO {
+
+	int postComment(CommentVO cvo);
+
+	List<CommentVO> getList(@Param("bno") long bno, @Param("pgvo") PagingVO pgvo);
+
+	int selectOneBnoTotalCount(long bno);
+
+	int editComment(CommentVO cvo);
+
+	int deleteComment(long cno);
+
+}

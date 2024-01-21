@@ -4,7 +4,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.project</groupId>
 	<artifactId>www</artifactId>
-	<name>spring_test2</name>
+	<name>spring_alone_project</name>
 	<packaging>war</packaging>
 	<version>1.0.0-BUILD-SNAPSHOT</version>
 	<properties>
@@ -76,7 +76,6 @@
 		    <groupId>ch.qos.logback</groupId>
 		    <artifactId>logback-classic</artifactId>
 		    <version>1.4.5</version>
-		    <scope>test</scope>
 		</dependency>
 		<!-- https://mvnrepository.com/artifact/ch.qos.logback/logback-core -->
 		<dependency>

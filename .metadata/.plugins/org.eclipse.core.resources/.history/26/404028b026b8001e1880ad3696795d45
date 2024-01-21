@@ -1,0 +1,11 @@
+package com.project.www.service;
+
+public class MemberServiceImpl implements MemberService {
+
+	@Override
+	public boolean updateLastLogin(String authEmail) {
+		// TODO Auto-generated method stub
+		return mdao.updateLastLogin(authEmail) > 0 ? true : false;
+	}
+
+}

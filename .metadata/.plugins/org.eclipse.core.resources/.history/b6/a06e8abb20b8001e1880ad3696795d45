@@ -1,0 +1,5 @@
+ge com.project.www.config;
+
+public class SecurityConfiguration {
+
+}

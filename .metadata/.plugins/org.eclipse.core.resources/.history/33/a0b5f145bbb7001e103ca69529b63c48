@@ -1,0 +1,16 @@
+package com.project.www.domain;
+
+@NoArgsConstructor
+@AllArgsConstructor
+@ToString
+@Getter
+@Service
+public class CommentVO {
+	
+	private long cno;
+	private long bno;
+	private String writer;
+	private String content;
+	private String regAt;
+	private String modAt;
+}

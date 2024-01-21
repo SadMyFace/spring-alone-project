@@ -1,0 +1,5 @@
+ackage com.project.www.domain;
+
+public class MemberVO {
+
+}

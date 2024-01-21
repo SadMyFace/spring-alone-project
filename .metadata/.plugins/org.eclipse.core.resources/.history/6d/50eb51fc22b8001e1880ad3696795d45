@@ -1,0 +1,63 @@
+package com.project.www.config;
+
+import static org.springframework.test.web.servlet.result.MockMvcResultHandlers.log;
+
+import org.springframework.context.annotation.Bean;
+import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
+import org.springframework.security.config.annotation.web.builders.HttpSecurity;
+import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
+import org.springframework.security.core.userdetails.UserDetailsService;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
+import org.springframework.security.crypto.password.PasswordEncoder;
+import org.springframework.security.web.authentication.AuthenticationFailureHandler;
+import org.springframework.security.web.authentication.AuthenticationSuccessHandler;
+
+public class SecurityConfig extends WebSecurityConfigurerAdapter {
+	
+	@Bean
+	public PasswordEncoder bcPasswordEncoder() {
+		return new BCryptPasswordEncoder();
+	}
+	
+	@Bean
+	public AuthenticationSuccessHandler authSucceessHandler() {
+		return new LoginSuccessHandler();
+	}
+	
+	@Bean
+	public AuthenticationFailureHandler authFailureHandler() {
+		return new LoginFailureHandler();
+	}
+	
+	@Bean
+	public UserDetailsService customUserService() {
+		return new CustomUserService();
+	}
+	
+	@Override
+	protected void configure(AuthenticationManagerBuilder auth) throws Exception {
+		auth.userDetailsService(customUserService()).passwordEncoder(bcPasswordEncoder());
+	}
+	
+	@Override
+	protected void configure(HttpSecurity http) throws Exception {
+		http.csrf().disable();
+		
+		http.authorizeRequests().antMatchers("/member/list").hasRole("ADMIN")
+		.antMatchers("/", "/board/list", "/board/detail", "/comment/**", "/upload/**", "/resources/**", "/member/register", "/member/login").permitAll()
+		.anyRequest().authenticated();
+		
+		http.formLogin()
+		.usernameParameter("email")
+		.passwordParameter("pwd")
+		.loginPage("/member/login")
+		.successHandler(authSucceessHandler())
+		.failureHandler(authFailureHandler());
+		
+		http.logout().logoutUrl("/member/logout")
+		.invalidateHttpSession(true)
+		.deleteCookies("JSESSIONID")
+		.logoutSuccessUrl("/");
+	}
+	
+}

@@ -1,0 +1,14 @@
+package com.project.www.repository;
+
+import java.util.List;
+
+import com.project.www.security.AuthVO;
+import com.project.www.security.MemberVO;
+
+public interface MemberDAO {
+
+	MemberVO selectEmail(String username);
+
+	List<AuthVO> selectAuths(String username);
+
+}

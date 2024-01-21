@@ -1,0 +1,20 @@
+package com.project.www.security;
+
+import javax.inject.Inject;
+
+import org.springframework.security.core.userdetails.UserDetails;
+
+import com.project.www.repository.MemberDAO;
+
+import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
+
+@Slf4j
+@RequiredArgsConstructor
+public class CustomUserService {
+	
+	@Inject
+	private MemberDAO mdao;
+	
+	public UserDetails load
+}

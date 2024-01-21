@@ -12,7 +12,7 @@ public class WebConfig extends AbstractAnnotationConfigDispatcherServletInitiali
 	@Override
 	protected Class<?>[] getRootConfigClasses() {
 		// TODO Auto-generated method stub
-		return new Class[] {RootConfig.class};
+		return new Class[] {RootConfig.class, SecurityConfig.class};
 	}
 
 	@Override
@@ -36,8 +36,6 @@ public class WebConfig extends AbstractAnnotationConfigDispatcherServletInitiali
 	}
 	
 	protected void customizeRegistration(Dynamic registration){
-		//그 외 기타 사용자 설정
-		//사용자 지정 익셉션 설정을 할 것인지 처리 throwExceptionIfNoHandlerFound
 		registration.setInitParameter("throwExceptionIfNoHandlerFound", "true");
 		
 		String uploadLocation = "C:\\_myProject\\_java\\_fileUpload";

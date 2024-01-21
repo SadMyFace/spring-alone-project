@@ -1,0 +1,11 @@
+package com.project.www.repository;
+
+import com.project.www.domain.CommentVO;
+
+public interface CommentDAO {
+
+	int postComment(CommentVO cvo);
+
+	int selectOneBnoTotalCount(long bno);
+
+}
